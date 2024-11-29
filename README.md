@@ -1,6 +1,6 @@
 # Fork details
 - Updated to work with Gymasium 1.0.0.
-- Minor superficial changes for readability (the math is the same as the original).
+- Minor superficial changes for readability. The math is the same as the original.
 
 # gym-inventory
 
