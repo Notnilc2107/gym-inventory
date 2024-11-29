@@ -1,6 +1,6 @@
 import pickle
-from tqdm import tqdm
-import gym_examples
+# from tqdm import tqdm
+import gym-inventory
 import gymnasium as gym
 import numpy as np
 from collections import defaultdict
