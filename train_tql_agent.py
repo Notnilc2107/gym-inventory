@@ -11,7 +11,8 @@ class TabularQLearningAgent:
         self.env = env
         self.q_values = defaultdict(lambda: np.zeros(env.action_space.n))
         # qTable is defined as a defaultdict. A defaultdict is just a dictionary that can take in any key.
-        # The default value is np.zeros(env.action_space.n). you can change it to anything, even a string.
+        # The default value when it takes a key is np.zeros(env.action_space.n). It might be worth it to change this since initializing 
+        # the q values to be 0 isn't always good.
         # The reason why the size of qTable is only the size of the action space (as opposed to the state-action space) is because we use
         # the observations as keys. The reason why it is done this way is because the action space is usually smaller than the state space.
         
