@@ -80,7 +80,7 @@ for episode in  (range(n_episodes)):
         obs = next_obs
         current_episodic_return += reward
 
-    episodicreturns += [current_episodic_return]
+    episodicreturns += [current_episodic_return] # this should increase after each iteration
     agent.decay_epsilon()
     if episode % 10 == 0:
         print("episode: "+str(episode)+" total reward: "+str(episodicreturns[episode])+" epsilon: "+str(agent.epsilon))
