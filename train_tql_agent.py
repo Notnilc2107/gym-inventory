@@ -50,7 +50,7 @@ start_epsilon = 1.0
 epsilon_decay = start_epsilon / (n_episodes / 2)  # reduce the exploration over time
 final_epsilon = 0.1
 
-env = gym.make('gym-inventory/Inventory-v0')
+env = gym.make('gym-inventory/Inventory-v0') # This just creates an InventoryEnv variable (defined in inventory_env.py).
 
 agent = TabularQLearningAgent(
     env=env,
@@ -64,14 +64,14 @@ start = time.time()
 
 episodicreturns = []
 for episode in  (range(n_episodes)):
-    obs, info = env.reset()
+    obs, info = env.reset() # env.reset() is defined in inventory_env.py
     done = False
     current_episodic_return = 0
 
     # play one episode
     while not done:
         action = agent.get_epsilon_greedy_action(obs)
-        next_obs, reward, terminated, truncated, info = env.step(action)
+        next_obs, reward, terminated, truncated, info = env.step(action) # env.step() is defined in inventory_env.py
 
         # update the agent
         agent.updateQvalues(obs, action, reward, terminated, next_obs)
